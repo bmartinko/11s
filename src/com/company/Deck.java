@@ -68,10 +68,13 @@ public class Deck {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
         Random BOI = new Random();
         int randoBoi = 0;
-        int tempBoi = 0;
+        Card tempBoi;
         
         for (int i = cards.size()-1; i > 0; i--) {
             randoBoi = BOI.nextInt();
+            tempBoi = cards.get(i);
+            cards.set(i, cards.get(randoBoi));
+            cards.set(randoBoi,tempBoi);
 
         }
     }
